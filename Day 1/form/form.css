@@ -1,0 +1,85 @@
+h1.head {
+    color: #333;
+    text-align: center;
+    padding-top: 5px;
+    Height: 40px;
+    background-color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: beige;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.label-form {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="text"],
+select,
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.gender-group {
+    display: flex;
+    align-items: center;
+}
+
+.gender-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.gender-group label {
+    align-items: center;
+}
+
+.submit,
+.reset {
+    padding: 10px;
+    margin: 10px 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form-final {
+    background-color: gainsboro;
+}
+
+.submit {
+    background-color: #4caf50;
+}
+
+.reset {
+    background-color: #f44336;
+}

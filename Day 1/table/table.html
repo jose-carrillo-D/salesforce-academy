@@ -1,0 +1,10 @@
+<template>
+    <div style="height: 250px;">
+        <lightning-datatable
+            key-field="employeeId"
+            data={employeeData}
+            columns={employeeColumns}
+            onrowselection={handleRowClick}>
+        </lightning-datatable>
+    </div>
+</template>
