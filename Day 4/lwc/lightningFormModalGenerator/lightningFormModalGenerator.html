@@ -1,0 +1,12 @@
+<template>
+        <c-lightning-modal>
+            <span slot="title">New Contact</span>
+            <div slot="content">
+                <c-lightning-new-form oncreatecontact={handleCreateContact} record={record}></c-lightning-new-form>
+            </div>
+            <div slot="actions">
+                <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handleCloseModal}>Cancel</button>
+                <button class="slds-button slds-button_brand" onclick={handleSaveButton}>Save</button>
+            </div>
+        </c-lightning-modal>
+</template>
