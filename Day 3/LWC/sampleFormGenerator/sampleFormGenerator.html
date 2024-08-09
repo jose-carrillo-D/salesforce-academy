@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : armando.ramirezcardenas@fox.com
+  @group             : 
+  @last modified on  : 02-12-2024
+  @last modified by  : armando.ramirezcardenas@fox.com
+-->
+<template>
+    <div class="slds-grid slds-gutters slds-wrap slds-p-around_small">
+        <template for:each={fieldValues} for:item="field">
+            <div key={field.fieldName} class="slds-col slds-size_1-of-2 slds-p-around_xx-small">
+                <lightning-input
+                    onchange={handleFieldChange}
+                    data-id={field.fieldName}
+                    data-type={field.type}
+                    label={field.label}
+                    value={field.value}
+                    type={field.type}
+                    pattern={field.pattern}
+                    required={field.required}>
+                </lightning-input>
+            </div>
+        </template>
+    </div>
+</template>

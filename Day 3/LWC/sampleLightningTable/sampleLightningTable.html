@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : armando.ramirezcardenas@fox.com
+  @group             : 
+  @last modified on  : 02-09-2024
+  @last modified by  : armando.ramirezcardenas@fox.com
+-->
+<template>
+    <!-- Table -->
+    <lightning-card title="Customers Data" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <div class="slds-grid slds-gutters slds-p-bottom_small">
+                <div class="slds-col slds-size_2-of-3">
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input type="search" label="Search" onchange={handleSearch}></lightning-input>
+                </div>
+            </div>
+            <template if:true={data}>
+                <lightning-datatable 
+                    key-field="id" 
+                    data={data} 
+                    columns={columns} 
+                    onrowaction={handleRowActions}>
+                </lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+
+    <!-- Modal -->
+    <template if:true={displayModal}>
+        <c-sample-modal>
+            <span slot="title">Edit Contact</span>
+            <div slot="content">
+                <c-sample-form-generator fields={fieldValues} onfieldchange={handleFieldChange}></c-sample-form-generator>
+            </div>
+            <div slot="actions">
+                <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handleClose} disabled={disableActions}>Cancel</button>
+                <button class="slds-button slds-button_brand" onclick={handleSave} disabled={disableActions}>Save</button>
+            </div>
+        </c-sample-modal>
+    </template>
+</template>
